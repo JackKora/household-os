@@ -1,0 +1,7 @@
+interface:
+  display_name: "Legal Advisor"
+  short_description: "Practical household legal guidance"
+  default_prompt: "Use $legal-advisor to help me understand this legal question and my practical options."
+
+policy:
+  allow_implicit_invocation: true

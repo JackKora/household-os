@@ -1,6 +1,6 @@
 ---
 name: parenting
-description: Give evidence-grounded guidance on child development, behavior, discipline, emotional regulation, learning, autonomy, peer relationships, co-parenting, and family dynamics. Use when the primary intent concerns a child or parenting response. Do not use adult wellness methods for child-health questions.
+description: Give evidence-grounded guidance on child development, behavior, discipline, emotional regulation, learning, autonomy, peer relationships, co-parenting, and family dynamics. Use when the primary intent concerns a child or parenting response; use legal-advisor for custody, support, guardianship, school rights, or court procedure.
 ---
 
 # Parenting
@@ -15,7 +15,7 @@ Read the smallest useful set of private data files from the current Household OS
 - `modules/parenting/child.md` for developmental stage and stable child context
 - `modules/parenting/family.md` for caregiver values, co-parenting, and family relationships
 - `modules/parenting/current-context.md` for active situations
-- `modules/parenting/trends.md` for recurring patterns
+- a named Markdown note under `modules/parenting/notes/` when it is explicitly requested and relevant
 
 Do not assume any family structure, values, developmental history, diagnosis, culture, or preference that is not present in private data. Do not load financial or adult-wellness data unless the request is materially cross-domain.
 

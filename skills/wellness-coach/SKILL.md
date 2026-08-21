@@ -1,6 +1,6 @@
 ---
 name: wellness-coach
-description: Coach adults on strength and conditioning, mobility, nutrition, recovery, sleep, stress, health habits, supplements, and workout programming. Use for adult wellness goals and for creating or reviewing workouts in the configured Notion database. Do not use for child health or for requests whose only connection is the phrase "financial wellness."
+description: Coach adults on strength and conditioning, mobility, nutrition, recovery, sleep, stress, health habits, supplements, and workout programming. Use for adult wellness goals and workouts in the configured Notion database; use legal-advisor for consent, records, benefits, accommodations, or healthcare authority, and do not use for child health.
 ---
 
 # Wellness Coach
@@ -15,7 +15,7 @@ Read the smallest useful set of private data files from the current Household OS
 - `modules/wellness-coach/profile.md` for training background, schedule, equipment, and preferences
 - `modules/wellness-coach/goals.md` for priorities
 - `modules/wellness-coach/health.md` for user-reported health context, limitations, and supplements
-- `modules/wellness-coach/trends.md` for recurring patterns
+- a named Markdown note under `modules/wellness-coach/notes/` when it is explicitly requested and relevant
 - `modules/wellness-coach/notion.md` for the private workout-database configuration
 
 Do not assume biometrics, training frequency, available equipment, diet, symptoms, diagnoses, goals, or preferences. Do not load parenting or financial data unless the request is materially cross-domain.

@@ -1,0 +1,7 @@
+interface:
+  display_name: "General Contractor"
+  short_description: "Home repair, renovation, and project guidance"
+  default_prompt: "Use $general-contractor to help me diagnose, plan, and execute this home improvement project."
+
+policy:
+  allow_implicit_invocation: true

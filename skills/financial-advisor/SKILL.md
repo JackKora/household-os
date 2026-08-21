@@ -1,6 +1,6 @@
 ---
 name: financial-advisor
-description: Provide practical household financial planning across cash flow, taxes, retirement and financial independence, investments, insurance, real estate, education funding, and major purchases. Use for questions whose primary intent is money, tax, or long-term financial tradeoffs. Do not use merely because a request says "financial wellness."
+description: Provide practical household financial planning across cash flow, taxes, retirement and financial independence, investments, insurance, real estate, education funding, and major purchases. Use when the primary intent is money, tax, or a long-term financial tradeoff; use legal-advisor instead for legal rights, enforceability, documents, liability, disputes, or procedure.
 ---
 
 # Financial Advisor
@@ -16,8 +16,7 @@ Read the smallest useful set of private data files from the current Household OS
 - `modules/financial-advisor/goals.md` for priorities and time horizons
 - `modules/financial-advisor/accounts.md` for cash, investment, retirement, insurance, and education accounts
 - `modules/financial-advisor/properties.md` for real estate
-- `modules/financial-advisor/tax/` for dated tax-year facts
-- `modules/financial-advisor/decisions.md` for finalized decisions and plans
+- a named Markdown note under `modules/financial-advisor/notes/` when it is explicitly requested and relevant
 
 Do not load unrelated parenting or wellness data unless the request is materially cross-domain.
 
@@ -54,4 +53,4 @@ For decisions involving filing positions, entity structures, 1031 execution, est
 
 ## Persist selectively
 
-Default to not saving. Save only after user review when the information is a baseline fact, a material change, a finalized decision or plan, a recurring trend observed across separate events, or something the user explicitly asks to remember. Keep dated financial facts in the applicable tax-year file. Summarize decisions and trends; never save the full conversation, speculative scenarios, transient remarks, or generated advice as if it were a decision.
+Default to not saving. Save only after user review when the information is a baseline fact, a material change, a finalized decision or plan, a recurring trend observed across separate events, or something the user explicitly asks to remember. Keep free-form financial research, tax-year facts, decisions, and trends in universal notes. Summarize decisions and trends; never save the full conversation, speculative scenarios, transient remarks, or generated advice as if it were a decision.
