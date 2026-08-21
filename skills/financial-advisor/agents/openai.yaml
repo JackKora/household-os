@@ -1,0 +1,7 @@
+interface:
+  display_name: "Financial Advisor"
+  short_description: "Practical financial planning and tradeoffs"
+  default_prompt: "Use $financial-advisor to compare the financial tradeoffs in this decision."
+
+policy:
+  allow_implicit_invocation: true

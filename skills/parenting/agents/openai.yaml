@@ -1,0 +1,7 @@
+interface:
+  display_name: "Parenting"
+  short_description: "Evidence-grounded parenting guidance"
+  default_prompt: "Use $parenting to help me think through a parenting situation."
+
+policy:
+  allow_implicit_invocation: true

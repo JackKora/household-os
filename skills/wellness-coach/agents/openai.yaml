@@ -1,0 +1,7 @@
+interface:
+  display_name: "Wellness Coach"
+  short_description: "Training, nutrition, recovery, and workouts"
+  default_prompt: "Use $wellness-coach to build an evidence-informed wellness plan."
+
+policy:
+  allow_implicit_invocation: true
