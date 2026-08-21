@@ -80,7 +80,21 @@ rg -F -q 'create, add to, show, list, search, rename, and move notes' templates/
 rg -F -q 'Create a `notes/` directory only when creating or moving the first note into it.' templates/data/CLAUDE.md
 rg -F -q 'Do not load notes automatically' templates/data/CLAUDE.md
 rg -F -q 'Do not create archives, lifecycle or status schemes, managed delete commands, placeholder files, automatic migrations, legacy fallbacks, or compatibility storage.' templates/data/CLAUDE.md
-rg -F -q 'Universal notes do not permit saving raw allegations' templates/data/CLAUDE.md
+rg -F -q 'do not treat ordinary conversation, a question, or the user' templates/data/CLAUDE.md
+rg -F -q 'An explicit request to save does authorize saving user-provided legal research' templates/data/CLAUDE.md
+rg -F -q 'repository access or sync and Git history' templates/data/CLAUDE.md
+rg -F -q 'assistant-generated or materially summarized legal research, analysis, or strategy' templates/data/CLAUDE.md
+rg -F -q 'recommend encrypted, non-Git storage' templates/data/CLAUDE.md
+rg -F -q 'do not override an explicit user choice to save it here' templates/data/CLAUDE.md
+rg -F -q "Legal material is the owner's choice" README.md
+rg -F -q 'Do not treat ordinary conversation, a question, or sharing material as permission to save it.' README.md
+rg -F -q 'give a concise warning first that repository access or sync and Git history can retain or expose it' README.md
+rg -F -q 'Show assistant-generated or materially summarized legal research, analysis, or strategy for review' README.md
+rg -F -q 'recommend encrypted, non-Git storage, but do not override the user' README.md
+rg -F -q 'Sensitive legal content is saved only on your explicit request' templates/data/README.md
+rg -F -q 'repository access or sync and Git history can retain or expose it' templates/data/README.md
+rg -F -q 'requires your explicit review and approval before saving' templates/data/README.md
+rg -F -q 'does not override your explicit choice' templates/data/README.md
 rg -q 'Notion is the sole workout record' templates/data/CLAUDE.md
 rg -q 'do not create a local file' skills/wellness-coach/SKILL.md
 rg -q 'Workout entries and recorded results belong only in Notion' skills/wellness-coach/SKILL.md

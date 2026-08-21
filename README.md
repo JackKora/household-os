@@ -55,11 +55,25 @@ Then ask to activate one module or all five. During activation, provide the sour
 
 ## Persistence
 
-Household OS defaults to not saving. It keeps its fixed reviewed-baseline files and, after review, can keep free-form research, plans, projects, matters, decisions, trends, tasks, sources, and outcomes as Markdown notes. Put a note in its primary module: `modules/financial-advisor/notes/`, `modules/general-contractor/notes/`, `modules/legal-advisor/notes/`, `modules/parenting/notes/`, or `modules/wellness-coach/notes/`. Use top-level `notes/` only for genuinely cross-functional content with no clear primary module. Ask conversationally to create, add, show, list, search, rename, or move a note. Notes are created lazily, are not loaded automatically, and remain until the user manually deletes the file; deleted files may remain in private Git history. User-provided note content may be written directly; assistant-generated or materially summarized content is shown for review first.
+Household OS defaults to not saving. It keeps fixed, reviewed baseline files and can save free-form research, plans, projects, matters, decisions, trends, tasks, sources, and outcomes as Markdown notes.
 
-Legal persistence is narrower: universal notes do not allow sensitive legal narratives, strategy, attorney communications, evidence, full documents, or generated analysis. Only a reviewed baseline, instrument inventory, neutral matter status or deadline the user asks to track, or finalized planning decision may be saved.
+- **Location:** Put a note in its primary module: `modules/financial-advisor/notes/`, `modules/general-contractor/notes/`, `modules/legal-advisor/notes/`, `modules/parenting/notes/`, or `modules/wellness-coach/notes/`. Use top-level `notes/` only for genuinely cross-functional content with no clear primary module.
+- **Note operations:** Ask conversationally to create, add, show, list, search, rename, or move a note.
+- **Lifecycle:** Notes are created lazily, are not loaded automatically, and remain until the user manually deletes the file. Deleted files may remain in private Git history.
+- **Review:** User-provided note content may be written directly. Assistant-generated or materially summarized content is shown for review first.
 
-The user's configured Notion database is the workout history. A working Notion connection is required to save a generated workout.
+### Sensitive legal content
+
+Legal material is the owner's choice, with an extra safeguard against accidental persistence.
+
+- Do not treat ordinary conversation, a question, or sharing material as permission to save it.
+- When the user explicitly asks to save user-provided legal research, narratives, strategy, attorney communications, evidence, documents, or other sensitive material, give a concise warning first that repository access or sync and Git history can retain or expose it, then save it.
+- Show assistant-generated or materially summarized legal research, analysis, or strategy for review and obtain explicit approval before saving.
+- Household members' interests may not align. For exceptionally sensitive material, recommend encrypted, non-Git storage, but do not override the user's explicit choice.
+
+### Workout history
+
+The user's configured Notion database is the sole workout history. A working Notion connection is required to save a generated workout.
 
 ## Development
 
