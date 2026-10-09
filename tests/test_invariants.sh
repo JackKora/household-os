@@ -9,6 +9,7 @@ expected_skills="financial-advisor
 general-contractor
 legal-advisor
 parenting
+political-advisor
 wellness-coach"
 actual_skills=$(find skills -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | sort)
 
@@ -21,7 +22,7 @@ test ! -e SKILL.md
 test -L AGENTS.md
 test "$(readlink AGENTS.md)" = "CLAUDE.md"
 
-for skill_name in financial-advisor general-contractor legal-advisor parenting wellness-coach; do
+for skill_name in financial-advisor general-contractor legal-advisor parenting political-advisor wellness-coach; do
   test -f "skills/$skill_name/SKILL.md"
   test -f "skills/$skill_name/agents/openai.yaml"
   test "$(sed -n '1p' "skills/$skill_name/SKILL.md")" = "---"
@@ -72,6 +73,7 @@ for note_path in \
   modules/general-contractor/notes/ \
   modules/legal-advisor/notes/ \
   modules/parenting/notes/ \
+  modules/political-advisor/notes/ \
   modules/wellness-coach/notes/; do
   rg -F -q "\`$note_path\`" templates/data/CLAUDE.md
 done
@@ -85,7 +87,7 @@ rg -F -q 'An explicit request to save does authorize saving user-provided legal 
 rg -F -q 'repository access or sync and Git history' templates/data/CLAUDE.md
 rg -F -q 'assistant-generated or materially summarized legal research, analysis, or strategy' templates/data/CLAUDE.md
 rg -F -q 'recommend encrypted, non-Git storage' templates/data/CLAUDE.md
-rg -F -q 'do not override an explicit user choice to save it here' templates/data/CLAUDE.md
+rg -F -q 'does not override an explicit user choice to save it here' templates/data/CLAUDE.md
 rg -F -q "Legal material is the owner's choice" README.md
 rg -F -q 'Do not treat ordinary conversation, a question, or sharing material as permission to save it.' README.md
 rg -F -q 'give a concise warning first that repository access or sync and Git history can retain or expose it' README.md

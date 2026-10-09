@@ -1,0 +1,7 @@
+interface:
+  display_name: "Political Advisor"
+  short_description: "Independent thinking on politics and society"
+  default_prompt: "Use $political-advisor to help me think through a political or social issue."
+
+policy:
+  allow_implicit_invocation: true
