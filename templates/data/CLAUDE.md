@@ -8,9 +8,12 @@ Use the project-scoped Household OS skill that matches the request's primary int
 - Use `general-contractor` for physical home or site condition, maintenance, diagnosis, repair, building systems, materials, remodels, additions, rehabs, roofing, scope, codes and permits, bids, contractors, workmanship, and rough construction cost. Building-hazard identification and property remediation remain here.
 - Use `legal-advisor` for legal rights and duties, wills, trusts, powers of attorney, advance directives, probate, family law, leases, landlord-tenant and property law, contracts, consumer and employment rights, disputes, court or agency procedure, and legal documents.
 - Use `parenting` for child development, behavior, discipline, emotions, learning, autonomy, peer relationships, co-parenting, and family dynamics.
+- Use `political-advisor` for politics, public policy, society, culture, social issues, competing perspectives, and reframing civic disagreements.
 - Use `wellness-coach` for adult exercise, nutrition, mobility, recovery, sleep, stress, health habits, supplements, and workout creation.
 
 Use more than one skill only when the request has material, distinct components. For mixed questions, choose the skill matching the primary decision and add another only for a distinct part of the answer. Use `general-contractor` for physical scope, methods, codes, bids, workmanship, and hazards; use `financial-advisor` for affordability, financing, tax treatment, or investment return; and use `legal-advisor` for contract rights, enforceability, liability, liens, disputes, insurance-coverage interpretation, or procedure. Use `wellness-coach` for adult personal health decisions. Route child symptoms or health context to `parenting`, together with appropriate pediatric care; do not silently apply adult wellness guidance. The phrase "financial wellness" alone does not invoke the wellness coach.
+
+Use `political-advisor` for the merits and social implications of public policy; add `legal-advisor` when a distinct legal conclusion is needed. Use `financial-advisor` for the household's financial response to policy, `parenting` for how to discuss an issue with a child, and `wellness-coach` for personal health decisions. A social issue touching one of these subjects does not automatically require all related skills.
 
 ## Read private data selectively
 
@@ -24,6 +27,7 @@ Store free-form research, plans, projects, matters, decisions, trends, tasks, so
 - `modules/general-contractor/notes/`
 - `modules/legal-advisor/notes/`
 - `modules/parenting/notes/`
+- `modules/political-advisor/notes/`
 - `modules/wellness-coach/notes/`
 
 Use top-level `notes/` only for genuinely cross-functional content with no clear primary module. Keep one canonical note only; when ownership changes, move it rather than copying it.
@@ -61,6 +65,8 @@ Default to not saving. Save only when at least one of these applies:
 Summarize durable trends and decisions; do not save raw transcripts. Do not save one-off anecdotes, passing emotions, routine meals or workouts, speculative financial scenarios, unchosen options, or generated advice as if it were a decision. Ask before writing when durability or intent is ambiguous.
 
 Do not store passwords, access tokens, or authentication secrets.
+
+For `political-advisor`, do not infer or save political affiliations, voting history, values, or issue positions from demographics, favored commentators, passing remarks, hypotheticals, or another household member's views. Keep only reviewed context the user explicitly wants retained. Ordinary political or social discussion does not authorize creating or updating a political profile.
 
 For `general-contractor`, keep durable facts in one approved primary-property baseline and related universal notes. After review, save finalized scope, decisions, dates, and durable outcomes only when user approval or clear intent supports it. Do not save raw conversations, transient diagnoses or guesses, access or security codes, full bids, full inspection reports, or generated advice as an approved plan.
 

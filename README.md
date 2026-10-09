@@ -1,14 +1,17 @@
 # Household OS
 
-Household OS is a file-based operating system for personal and family decisions. It provides five focused skills:
+Household OS is a file-based operating system for personal and family decisions. It provides six focused skills:
 
 - Financial Advisor
 - General Contractor
 - Legal Advisor
 - Parenting
+- Political Advisor
 - Wellness Coach
 
 Reusable methodology lives in this repository. Personal household context lives in a separate data repository.
+
+Political Advisor is a neutral thinking partner for politics, society, and social issues. It helps reframe disagreements, test assumptions, examine evidence, and understand competing values without adopting a party line or forcing a middle-ground conclusion. It works without a private political profile.
 
 ## Install
 
@@ -35,8 +38,8 @@ The installer:
 
 - validates the destination before changing it, then creates the private data repository while preserving existing regular files
 - initializes local Git for version history
-- connects the five skills to Codex through `.agents/skills/`
-- connects the five skills to Claude Code through `.claude/skills/`
+- connects the six skills to Codex through `.agents/skills/`
+- connects the six skills to Claude Code through `.claude/skills/`
 - shares one set of runtime instructions through `CLAUDE.md` and `AGENTS.md`
 
 The destination must be new, empty, or an existing Household OS data repository created by this installer. It cannot be the public logic repository, a directory inside it, or a directory inside another Git repository. On an existing installation, customized runtime instructions are preserved and must be reconciled with `templates/data/CLAUDE.md` before the installer will continue.
@@ -47,7 +50,7 @@ Open Codex or Claude Code from the data repository to use Household OS with priv
 cd ~/household-os-data
 ```
 
-Then ask to activate one module or all five. During activation, provide the source notes when prompted. Household OS separates personal facts from methodology, shows the proposed baseline for review, and writes only after approval.
+Then ask to activate one module or all six. During activation, provide the source notes when prompted. Household OS separates personal facts from methodology, shows the proposed baseline for review, and writes only after approval.
 
 ## How routing works
 
@@ -57,7 +60,7 @@ Then ask to activate one module or all five. During activation, provide the sour
 
 Household OS defaults to not saving. It keeps fixed, reviewed baseline files and can save free-form research, plans, projects, matters, decisions, trends, tasks, sources, and outcomes as Markdown notes.
 
-- **Location:** Put a note in its primary module: `modules/financial-advisor/notes/`, `modules/general-contractor/notes/`, `modules/legal-advisor/notes/`, `modules/parenting/notes/`, or `modules/wellness-coach/notes/`. Use top-level `notes/` only for genuinely cross-functional content with no clear primary module.
+- **Location:** Put a note in its primary module: `modules/financial-advisor/notes/`, `modules/general-contractor/notes/`, `modules/legal-advisor/notes/`, `modules/parenting/notes/`, `modules/political-advisor/notes/`, or `modules/wellness-coach/notes/`. Use top-level `notes/` only for genuinely cross-functional content with no clear primary module.
 - **Note operations:** Ask conversationally to create, add, show, list, search, rename, or move a note.
 - **Lifecycle:** Notes are created lazily, are not loaded automatically, and remain until the user manually deletes the file. Deleted files may remain in private Git history.
 - **Review:** User-provided note content may be written directly. Assistant-generated or materially summarized content is shown for review first.

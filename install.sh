@@ -107,7 +107,7 @@ elif outer_top=$(git -C "$parent" rev-parse --show-toplevel 2>/dev/null); then
   die "refusing to create a nested Git repository inside $outer_top"
 fi
 
-files=(CLAUDE.md README.md gitignore shared/household.md modules/financial-advisor/profile.md modules/financial-advisor/goals.md modules/financial-advisor/accounts.md modules/financial-advisor/properties.md modules/general-contractor/property.md modules/legal-advisor/profile.md modules/parenting/child.md modules/parenting/family.md modules/parenting/current-context.md modules/wellness-coach/profile.md modules/wellness-coach/goals.md modules/wellness-coach/health.md modules/wellness-coach/notion.md)
+files=(CLAUDE.md README.md gitignore shared/household.md modules/financial-advisor/profile.md modules/financial-advisor/goals.md modules/financial-advisor/accounts.md modules/financial-advisor/properties.md modules/general-contractor/property.md modules/legal-advisor/profile.md modules/parenting/child.md modules/parenting/family.md modules/parenting/current-context.md modules/political-advisor/profile.md modules/wellness-coach/profile.md modules/wellness-coach/goals.md modules/wellness-coach/health.md modules/wellness-coach/notion.md)
 for f in "${files[@]}"; do
   dest=$data/$f
   [ "$f" = gitignore ] && dest=$data/.gitignore
@@ -125,7 +125,7 @@ if [ "$existing" = 1 ]; then
 else
   previous=
 fi
-for skill in financial-advisor general-contractor legal-advisor parenting wellness-coach; do
+for skill in financial-advisor general-contractor legal-advisor parenting political-advisor wellness-coach; do
   for base in .agents .claude; do
     link=$data/$base/skills/$skill
     target=$logic/skills/$skill
@@ -146,7 +146,7 @@ for f in "${files[@]}"; do
   mkdir -p "$(dirname "$dest")"
   [ -e "$dest" ] || cp "$src" "$dest"
 done
-for skill in financial-advisor general-contractor legal-advisor parenting wellness-coach; do
+for skill in financial-advisor general-contractor legal-advisor parenting political-advisor wellness-coach; do
   for base in .agents .claude; do
     link=$data/$base/skills/$skill; target=$logic/skills/$skill
     if [ -L "$link" ] && [ "$(readlink "$link")" != "$target" ]; then unlink "$link"; fi
